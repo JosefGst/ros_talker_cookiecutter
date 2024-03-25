@@ -2,7 +2,7 @@
 
 int main(int argc, char** argv )
 {
-    ros::init(argc, argv, "chatter");
+    ros::init(argc, argv, "sub_pub");
 
     Template chatter;
 
