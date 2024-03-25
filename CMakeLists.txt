@@ -1,0 +1,28 @@
+cmake_minimum_required(VERSION 3.0.2)
+project(template_sub_pub)
+
+find_package(catkin REQUIRED COMPONENTS
+  roscpp
+  rospy
+  std_msgs
+)
+
+catkin_package(
+ INCLUDE_DIRS include
+ LIBRARIES template_sub_pub
+ CATKIN_DEPENDS roscpp rospy std_msgs
+#  DEPENDS system_lib
+)
+
+add_library(template_lib
+  src/template_ros.cpp
+)
+
+include_directories(
+  include
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(template_node src/template_node.cpp)
+add_dependencies(template_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(template_node template_lib ${catkin_LIBRARIES})
