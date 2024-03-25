@@ -14,15 +14,19 @@ public:
 private:
     ros::NodeHandle nh_;
 
+    void init_params();
     void cmd_vel_cb(const geometry_msgs::Twist& msg);
-
-    void timer_1hz_cb(const ros::TimerEvent& event);
-    ros::Timer timer_1hz_cb_timer;
+    void timer_cb(const ros::TimerEvent& event);
+    ros::Timer timer;
 
     std_msgs::String string_msg;
     ros::Publisher chatter_pub;
 
     ros::Subscriber cmd_vel_sub;
+
+    //PARAMS
+    int rate = 1;
+    std::string pub_string;
 };
 
 
