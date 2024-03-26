@@ -22,7 +22,8 @@ published string on chatter topic
 
 ## TODO
 
-- [ ] make params reconfigurable
+- [x] make params reconfigurable
 - [ ] add tests
 - [ ] github actions
 - [ ] ros2 branch
+- [ ] automatic documentation generation
