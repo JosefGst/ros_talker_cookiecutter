@@ -25,6 +25,7 @@ namespace ros_package_template
   void Template::init_params()
   {
     nh_.param("rate", rate, 10);
+    nh_.param("pub_string", global_config.pub_string, std::string("Hello World!"));
   }
 
   void Template::timer_cb(const ros::TimerEvent &event)
