@@ -13,10 +13,11 @@ generate_dynamic_reconfigure_options(
 )
 
 catkin_package(
- INCLUDE_DIRS include
- LIBRARIES template_sub_pub
- CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+  INCLUDE_DIRS include
+  LIBRARIES template_sub_pub
+  CATKIN_DEPENDS roscpp rospy std_msgs
+
+  # DEPENDS system_lib
 )
 
 add_library(template_lib
