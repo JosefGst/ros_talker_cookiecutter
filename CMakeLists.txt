@@ -5,6 +5,11 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  dynamic_reconfigure
+)
+
+generate_dynamic_reconfigure_options(
+  config/reconf.cfg
 )
 
 catkin_package(
@@ -26,3 +31,5 @@ include_directories(
 add_executable(template_node src/template_node.cpp)
 add_dependencies(template_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 target_link_libraries(template_node template_lib ${catkin_LIBRARIES})
+
+add_dependencies(template_node ${PROJECT_NAME}_gencfg)
