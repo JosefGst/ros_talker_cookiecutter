@@ -8,7 +8,7 @@ int main(int argc, char** argv )
     // DYNAMIC RECONFIGURE
     dynamic_reconfigure::Server<template_sub_pub::ReconfigureConfig> server;
     dynamic_reconfigure::Server<template_sub_pub::ReconfigureConfig>::CallbackType f;
-    f = boost::bind(&callback, _1, _2);
+    f = boost::bind(&reconfigure_cb, _1, _2);
     server.setCallback(f);
 
     ros_package_template::Template chatter;

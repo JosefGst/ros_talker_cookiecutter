@@ -29,7 +29,6 @@ namespace ros_package_template
 
         // PARAMS
         int rate = 1;
-        std::string pub_string;
         
     };
 }

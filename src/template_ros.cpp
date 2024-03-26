@@ -25,12 +25,11 @@ namespace ros_package_template
   void Template::init_params()
   {
     nh_.param("rate", rate, 10);
-    nh_.param("pub_string", pub_string, std::string("Hello World"));
   }
 
   void Template::timer_cb(const ros::TimerEvent &event)
   {
-    string_msg.data = pub_string;
+    string_msg.data = global_config.pub_string;
     chatter_pub.publish(string_msg);
   }
 
