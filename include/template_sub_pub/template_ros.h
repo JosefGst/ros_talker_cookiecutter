@@ -5,25 +5,31 @@
 #include "std_msgs/String.h"
 #include "geometry_msgs/Twist.h"
 
-class Template
+namespace ros_package_template
 {
-public:
-    Template();
-    void init_chatter();
 
-private:
-    ros::NodeHandle nh_;
+    class Template
+    {
+    public:
+        Template();
+        void init_chatter();
 
-    void cmd_vel_cb(const geometry_msgs::Twist& msg);
+    private:
+        ros::NodeHandle nh_;
 
-    void timer_1hz_cb(const ros::TimerEvent& event);
-    ros::Timer timer_1hz_cb_timer;
+        void init_params();
+        void cmd_vel_cb(const geometry_msgs::Twist &msg);
+        void timer_cb(const ros::TimerEvent &event);
+        ros::Timer timer;
 
-    std_msgs::String string_msg;
-    ros::Publisher chatter_pub;
+        std_msgs::String string_msg;
+        ros::Publisher chatter_pub;
 
-    ros::Subscriber cmd_vel_sub;
-};
+        ros::Subscriber cmd_vel_sub;
 
+        // PARAMS
+        int rate = 1;
+        };
+}
 
 #endif
