@@ -1,5 +1,7 @@
 # Template ROS sub pub pkg cpp
 
+I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this template I hope the repetitive setup task can be reduced and jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters and documentation generation with rosdoc_lite. 
+
 ## Run
 
     rosrun template_sub_pub template_node
@@ -14,16 +16,25 @@
 
 ## Parameters
 - rate (int,default:1)
-publish rate of chatter" topic
+    - publish rate of chatter" topic in [Hz]
+    
 - pub_string (string,default:"Hello World")
-published string on chatter topic
+    - published string on chatter topic
 
-![graph](assets/rosgraph.svg)
+![graph](doc/assets/rosgraph.svg)
 
+## Development
+create documentation
+
+    rosdoc_lite .
+
+To see the generated [documentation website](https://josefgst.github.io/template_sub_pub/doc/html/index.html).
+    
 ## TODO
 
 - [x] make params reconfigurable
 - [ ] add tests
 - [ ] github actions
 - [ ] ros2 branch
-- [ ] automatic documentation generation
+- [x] automatic documentation generation
+- [ ] dockerize

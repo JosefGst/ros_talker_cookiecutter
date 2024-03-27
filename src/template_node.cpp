@@ -1,5 +1,5 @@
-#include "template_sub_pub/template_ros.h"
-#include "template_sub_pub/reconfigure.h"
+#include "template_sub_pub/template_ros.hpp"
+#include "template_sub_pub/reconfigure.hpp"
 
 int main(int argc, char **argv)
 {
