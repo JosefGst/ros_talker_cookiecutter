@@ -24,12 +24,19 @@ I kept copying code from the official documentation or from my previous works ev
 ![graph](doc/assets/rosgraph.svg)
 
 ## Development
-create documentation
+### create documentation
+In root of package
 
     rosdoc_lite .
 
 To see the generated [documentation website](https://josefgst.github.io/template_sub_pub/doc/html/index.html).
-    
+
+### Linting
+In root of workspace
+
+    catkin_make roslint_template_sub_pub
+
+
 ## TODO
 
 - [x] make params reconfigurable
