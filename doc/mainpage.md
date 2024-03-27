@@ -17,8 +17,9 @@ Template ROS sub pub pkg cpp {#mainpage}
 
 ## Parameters
 - rate (int,default:1)
-publish rate of chatter" topic
+    - publish rate of chatter" topic in [Hz]
+    
 - pub_string (string,default:"Hello World")
-published string on chatter topic
+    - published string on chatter topic
 
 ![graph](assets/rosgraph.svg)

@@ -3,11 +3,11 @@ authors: ''
 brief: ''
 bugtracker: ''
 depends:
-- roscpp
 - std_msgs
-- catkin
+- roscpp
 - dynamic_reconfigure
 - rospy
+- catkin
 description: The template_sub_pub package
 license: TODO
 maintainers: u <u@todo.todo>
