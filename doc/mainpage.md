@@ -1,4 +1,7 @@
-# Template ROS sub pub pkg cpp
+Template ROS sub pub pkg cpp {#mainpage}
+===================
+
+[TOC]
 
 ## Run
 
@@ -18,17 +21,4 @@ publish rate of chatter" topic
 - pub_string (string,default:"Hello World")
 published string on chatter topic
 
-![graph](doc/assets/rosgraph.svg)
-
-## Development
-create documentation
-
-    rosdoc_lite .
-    
-## TODO
-
-- [x] make params reconfigurable
-- [ ] add tests
-- [ ] github actions
-- [ ] ros2 branch
-- [ ] automatic documentation generation
+![graph](assets/rosgraph.svg)
