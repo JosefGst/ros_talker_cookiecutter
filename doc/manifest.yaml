@@ -1,0 +1,18 @@
+actions: []
+authors: ''
+brief: ''
+bugtracker: ''
+depends:
+- roscpp
+- std_msgs
+- catkin
+- dynamic_reconfigure
+- rospy
+description: The template_sub_pub package
+license: TODO
+maintainers: u <u@todo.todo>
+msgs: []
+package_type: package
+repo_url: ''
+srvs: []
+url: ''
