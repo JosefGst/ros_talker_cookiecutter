@@ -2,11 +2,14 @@ cmake_minimum_required(VERSION 3.0.2)
 project(template_sub_pub)
 
 find_package(catkin REQUIRED COMPONENTS
+  roslint
   roscpp
   rospy
   std_msgs
   dynamic_reconfigure
 )
+
+roslint_cpp()
 
 generate_dynamic_reconfigure_options(
   config/reconf.cfg
