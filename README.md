@@ -24,6 +24,8 @@ published string on chatter topic
 create documentation
 
     rosdoc_lite .
+
+To see the generated [documentation website](https://josefgst.github.io/template_sub_pub/doc/html/index.html).
     
 ## TODO
 
