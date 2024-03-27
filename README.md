@@ -21,7 +21,7 @@ I kept copying code from the official documentation or from my previous works ev
 - pub_string (string,default:"Hello World")
     - published string on chatter topic
 
-![graph](assets/rosgraph.svg)
+![graph](doc/assets/rosgraph.svg)
 
 ## Development
 create documentation
