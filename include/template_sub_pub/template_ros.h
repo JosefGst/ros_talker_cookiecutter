@@ -19,6 +19,12 @@ namespace ros_package_template
 
         void init_params();
         void cmd_vel_cb(const geometry_msgs::Twist &msg);
+        /**
+         * @brief Timer Callback function.
+         *
+         * Main Function which is frequently called by the timer.
+         *
+         */
         void timer_cb(const ros::TimerEvent &event);
         ros::Timer timer;
 
