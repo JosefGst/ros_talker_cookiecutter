@@ -1,6 +1,6 @@
 # Template ROS sub pub pkg cpp
 
-I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this template I hope the repetitive setup task can be reduced and jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters and documentation generation with rosdoc_lite. 
+I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this template I hope the repetitive setup task can be reduced and jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters and documentation generation with rosdoc_lite.
 
 ## Run
 
@@ -9,37 +9,46 @@ I kept copying code from the official documentation or from my previous works ev
     roslaunch template_sub_pub template.launch pub_string:="hello" rate:=1
 
 ## Published Topics
+
 - chatter [std_msgs/String](https://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html)
 
 ## Subscribed Topics
+
 - cmd_vel [(geometry_msgs/Twist)](https://docs.ros.org/en/melodic/api/geometry_msgs/html/msg/Twist.html)
 
 ## Parameters
+
 - rate (int,default:1)
-    - publish rate of chatter" topic in [Hz]
-    
+  - publish rate of chatter" topic in [Hz]
 - pub_string (string,default:"Hello World")
-    - published string on chatter topic
+  - published string on chatter topic
 
 ![graph](doc/assets/rosgraph.svg)
 
 ## Development
+
+### Debugging C++
+
+Move the .vscode folder into the workspace directory. Everything should be set up for debugging in c++.
+
+### Linting
+
+In root of workspace
+
+    catkin_make roslint_template_sub_pub
+
 ### create documentation
+
 In root of package
 
     rosdoc_lite .
 
 To see the generated [documentation website](https://josefgst.github.io/template_sub_pub/doc/html/index.html).
 
-### Linting
-In root of workspace
-
-    catkin_make roslint_template_sub_pub
-
-
 ## TODO
 
 - [x] make params reconfigurable
+- [x] debugging c++
 - [ ] add tests
 - [ ] github actions
 - [ ] ros2 branch

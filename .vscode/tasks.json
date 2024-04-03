@@ -1,0 +1,34 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make_debug",
+            "detail": "Build workspace with debug symbols",
+            "type": "catkin_make",
+            "args": [
+                "--directory",
+                "${workspaceFolder}",
+                "-DCMAKE_BUILD_TYPE=Debug"
+            ],
+            "problemMatcher": [
+                "$catkin-gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "make",
+            "detail": "Build workspace (default)",
+            "type": "catkin_make",
+            "problemMatcher": [
+                "$catkin-gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+    ]
+}
