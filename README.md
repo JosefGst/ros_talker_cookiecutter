@@ -79,4 +79,4 @@ To see the generated [documentation website](https://josefgst.github.io/template
 - [ ] github actions
 - [ ] ros2 branch
 - [x] automatic documentation generation
-~~ dockerization should be in separate docker_ws repo ~~
+- [ ] dockerization should be in separate docker_ws repo 
