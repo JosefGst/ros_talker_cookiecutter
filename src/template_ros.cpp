@@ -51,8 +51,12 @@ namespace ros_package_template
 
   void Template::init_params()
   {
-    nh_.param("rate", rate, 10);
-    nh_.param("pub_string", global_config.pub_string, std::string("Hello World!"));
+    if(!nh_.param("rate", rate, 10)){
+      ROS_WARN("No rate set. Default is 10");
+    }
+    if(!nh_.param("pub_string", global_config.pub_string, std::string("Hello World!"))){
+      ROS_WARN("No pub_string set. Default is 'Hello World!'");
+    }
   }
 
   void Template::timer_cb(const ros::TimerEvent &event)
