@@ -1,6 +1,18 @@
 # Template ROS sub pub pkg cpp
 
-I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this template I hope the repetitive setup task can be reduced and jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters and documentation generation with rosdoc_lite.
+## Contents
+
+- [Run](#run)
+- [Published Topics](#published-topics)
+- [Subscribed Topics](#subscribed-topics)
+- [Parameters](#parameters)
+- [Development](#development)
+  - [Debugging C++](#debugging-c)
+  - [Linting](#linting)
+  - [Create Documentation](#create-documentation)
+- [TODO](#todo)
+
+I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this template I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite and c++ debug setup.
 
 ## Run
 
@@ -29,7 +41,21 @@ I kept copying code from the official documentation or from my previous works ev
 
 ### Debugging C++
 
-Move the .vscode folder into the workspace directory. Everything should be set up for debugging in c++.
+1. Move the .vscode folder into the workspace directory. 
+2. Edit the launch.json file as necessary.
+3. Run the "make_debug" task
+4. Click the Debug button on the left side in vscode. Select "ROS:Launch" and click the the green arrow.
+
+#### Alternatively attach to single node
+
+In addition to the previous steps 
+1. Run the "ROS:Start" task
+2. rosrun the node
+3. Click the green debug button with ROS:attach selected
+
+#### References
+[Polyhobbyist Youtube](https://www.youtube.com/watch?v=uqqHgYsskJI)
+[vscode-ros github](https://github.com/ms-iot/vscode-ros/blob/master/doc/debug-support.mdA)
 
 ### Linting
 
