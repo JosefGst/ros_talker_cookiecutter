@@ -1,6 +1,7 @@
 {
+  "ros.distro": "noetic",
   "editor.tabSize": 8,
-  "editor.rulers": [100],
+  "editor.rulers": [120],
   "files.associations": {
     "condition_variable": "cpp",
     "array": "cpp",
