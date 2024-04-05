@@ -1,18 +1,18 @@
 /*
  * MIT License
- * 
+ *
  * Copyright (c) 2024 Josef Gstoettner
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -21,8 +21,6 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-
-
 
 #include "ros/ros.h"
 #include "template_sub_pub/template_ros.h"
@@ -51,10 +49,12 @@ namespace ros_package_template
 
   void Template::init_params()
   {
-    if(!nh_.param("rate", rate, 10)){
+    if (!nh_.param("rate", rate, 10))
+    {
       ROS_WARN("No rate set. Default is 10");
     }
-    if(!nh_.param("pub_string", global_config.pub_string, std::string("Hello World!"))){
+    if (!nh_.param("pub_string", global_config.pub_string, std::string("Hello World!")))
+    {
       ROS_WARN("No pub_string set. Default is 'Hello World!'");
     }
   }
