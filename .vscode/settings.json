@@ -2,6 +2,7 @@
   "ros.distro": "noetic",
   "editor.tabSize": 8,
   "editor.rulers": [120],
+  "python.analysis.extraPaths": ["/opt/ros/noetic/lib/python3/dist-packages"],
   "files.associations": {
     "condition_variable": "cpp",
     "array": "cpp",

@@ -54,6 +54,7 @@
                 "purge",
                 "make"
             ],
+            "problemMatcher": []
         },
         {
             "label": "purge",

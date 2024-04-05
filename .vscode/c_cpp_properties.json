@@ -6,8 +6,10 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
-        "${workspaceFolder}/**",
-        "/opt/ros/noetic/include/**"
+        "/opt/ros/noetic/include/**",
+        "/home/u/ros/template_ws/devel/include/**",
+        "/home/u/ros/template_ws/src/template_sub_pub/include/**",
+        "/usr/include/**"
       ],
       "name": "ROS",
       "intelliSenseMode": "gcc-x64",
