@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-#ifndef #{PKG_NAME_CAP}_ROS_H
-#define #{PKG_NAME_CAP}_ROS_H
+#ifndef #{HEADER_GUARD}_ROS_H
+#define #{HEADER_GUARD}_ROS_H
 
 #include "ros/ros.h"
 #include "std_msgs/String.h"
@@ -31,10 +31,10 @@
 
 namespace ros_#{PKG_NAME}
 {
-class #{CLASS}
+class #{CLASS_NAME}
 {
 public:
-    #{CLASS}();
+    #{CLASS_NAME}();
     void init_chatter();
 
 private:
@@ -61,4 +61,4 @@ private:
 };
 }  // namespace ros_#{PKG_NAME}
 
-#endif  // #{PKG_NAME_CAP}_ROS_H
+#endif  // #{HEADER_GUARD}_ROS_H

@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-#ifndef #{PKG_NAME_CAP}_RECONFIGURE_H
-#define #{PKG_NAME_CAP}_RECONFIGURE_H
+#ifndef #{HEADER_GUARD}_RECONFIGURE_H
+#define #{HEADER_GUARD}_RECONFIGURE_H
 
 #include <dynamic_reconfigure/server.h>
 #include <#{PKG_NAME}/ReconfigureConfig.h>
@@ -37,4 +37,4 @@ void reconfigure_cb(#{PKG_NAME}::ReconfigureConfig &config, uint32_t level)
   global_config = config;
 }
 
-#endif  // #{PKG_NAME_CAP}_RECONFIGURE_H
+#endif  // #{HEADER_GUARD}_RECONFIGURE_H

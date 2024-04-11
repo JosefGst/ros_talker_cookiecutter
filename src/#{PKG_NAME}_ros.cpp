@@ -30,24 +30,24 @@
 namespace ros_#{PKG_NAME}
 {
 
-  #{CLASS}::#{CLASS}() : nh_("~")
+  #{CLASS_NAME}::#{CLASS_NAME}() : nh_("~")
   {
     init_params();
     init_chatter();
 
-    timer = nh_.createTimer(ros::Duration(1.0 / rate), &#{CLASS}::timer_cb, this, false);
+    timer = nh_.createTimer(ros::Duration(1.0 / rate), &#{CLASS_NAME}::timer_cb, this, false);
   }
 
-  void #{CLASS}::init_chatter()
+  void #{CLASS_NAME}::init_chatter()
   {
     chatter_pub = nh_.advertise<std_msgs::String>("/chatter", 1);
     ROS_INFO_STREAM("advertise to chatter topic on [" << chatter_pub.getTopic() << "]");
 
-    cmd_vel_sub = nh_.subscribe("/cmd_vel", 1, &#{CLASS}::cmd_vel_cb, this);
+    cmd_vel_sub = nh_.subscribe("/cmd_vel", 1, &#{CLASS_NAME}::cmd_vel_cb, this);
     ROS_INFO_STREAM("subscribe to the cmd topic on [" << cmd_vel_sub.getTopic() << "]");
   }
 
-  void #{CLASS}::init_params()
+  void #{CLASS_NAME}::init_params()
   {
     if (!nh_.param("rate", rate, 10))
     {
@@ -59,13 +59,13 @@ namespace ros_#{PKG_NAME}
     }
   }
 
-  void #{CLASS}::timer_cb(const ros::TimerEvent &event)
+  void #{CLASS_NAME}::timer_cb(const ros::TimerEvent &event)
   {
     string_msg.data = global_config.pub_string;
     chatter_pub.publish(string_msg);
   }
 
-  void #{CLASS}::cmd_vel_cb(const geometry_msgs::Twist &msg)
+  void #{CLASS_NAME}::cmd_vel_cb(const geometry_msgs::Twist &msg)
   {
     ROS_INFO_STREAM("cmd_vel: [" << msg << "]");
   }

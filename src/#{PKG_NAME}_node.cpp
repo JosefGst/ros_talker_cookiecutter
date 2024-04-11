@@ -37,7 +37,7 @@ int main(int argc, char **argv)
     f = boost::bind(&reconfigure_cb, _1, _2);
     server.setCallback(f);
 
-    ros_#{PKG_NAME}::#{CLASS} chatter;
+    ros_#{PKG_NAME}::#{CLASS_NAME} chatter;
 
     ros::spin();
     return 0;
