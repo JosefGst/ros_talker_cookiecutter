@@ -22,19 +22,19 @@
  * SOFTWARE.
  */
 
-#ifndef TEMPLATE_SUB_PUB_TEMPLATE_ROS_H
-#define TEMPLATE_SUB_PUB_TEMPLATE_ROS_H
+#ifndef #{PKG_NAME_CAP}_ROS_H
+#define #{PKG_NAME_CAP}_ROS_H
 
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 #include "geometry_msgs/Twist.h"
 
-namespace ros_package_template
+namespace ros_#{PKG_NAME}
 {
-class Template
+class #{CLASS}
 {
 public:
-    Template();
+    #{CLASS}();
     void init_chatter();
 
 private:
@@ -59,6 +59,6 @@ private:
     // PARAMS
     int rate = 1;
 };
-}  // namespace ros_package_template
+}  // namespace ros_#{PKG_NAME}
 
-#endif  // TEMPLATE_SUB_PUB_TEMPLATE_ROS_H
+#endif  // #{PKG_NAME_CAP}_ROS_H

@@ -1,4 +1,4 @@
-# Template ROS sub pub pkg cpp
+# #{PKG_NAME}
 
 ## Contents
 
@@ -12,13 +12,13 @@
   - [Create Documentation](#create-documentation)
 - [TODO](#todo)
 
-I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this template I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite and c++ debug setup.
+I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this #{PKG_NAME} I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite and c++ debug setup.
 
 ## Run
 
-    rosrun template_sub_pub template_node
-    rosrun template_sub_pub template_node _pub_string:="hello" _rate:=1
-    roslaunch template_sub_pub template.launch pub_string:="hello" rate:=1
+    rosrun #{PKG_NAME} #{PKG_NAME}_node
+    rosrun #{PKG_NAME} #{PKG_NAME}_node _pub_string:="hello" _rate:=1
+    roslaunch #{PKG_NAME} #{PKG_NAME}.launch pub_string:="hello" rate:=1
 
 ## Published Topics
 
@@ -61,7 +61,7 @@ In addition to the previous steps
 
 In root of workspace
 
-    catkin_make roslint_template_sub_pub
+    catkin_make roslint_#{PKG_NAME}
 
 ### create documentation
 
@@ -69,7 +69,7 @@ In root of package
 
     rosdoc_lite .
 
-To see the generated [documentation website](https://josefgst.github.io/template_sub_pub/doc/html/index.html).
+To see the generated [documentation website](https://josefgst.github.io/#{PKG_NAME}/doc/html/index.html).
 
 ## TODO
 

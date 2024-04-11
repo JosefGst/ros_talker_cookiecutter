@@ -24,20 +24,20 @@
 
 
 
-#include "template_sub_pub/template_ros.h"
-#include "template_sub_pub/reconfigure.h"
+#include "#{PKG_NAME}/#{PKG_NAME}_ros.h"
+#include "#{PKG_NAME}/reconfigure.h"
 
 int main(int argc, char **argv)
 {
-    ros::init(argc, argv, "sub_pub");
+    ros::init(argc, argv, "#{PKG_NAME}");
 
     // DYNAMIC RECONFIGURE
-    dynamic_reconfigure::Server<template_sub_pub::ReconfigureConfig> server;
-    dynamic_reconfigure::Server<template_sub_pub::ReconfigureConfig>::CallbackType f;
+    dynamic_reconfigure::Server<#{PKG_NAME}::ReconfigureConfig> server;
+    dynamic_reconfigure::Server<#{PKG_NAME}::ReconfigureConfig>::CallbackType f;
     f = boost::bind(&reconfigure_cb, _1, _2);
     server.setCallback(f);
 
-    ros_package_template::Template chatter;
+    ros_#{PKG_NAME}::#{CLASS} chatter;
 
     ros::spin();
     return 0;

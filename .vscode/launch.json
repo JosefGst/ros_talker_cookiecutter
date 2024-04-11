@@ -32,7 +32,7 @@
             "id": "launch",
             "description": "Select launch file",
             "options": [
-                "template"
+                "#{PKG_NAME}"
             ]
         },
         {
@@ -40,7 +40,7 @@
             "id": "pkg",
             "description": "Select package",
             "options": [
-                "template_sub_pub"
+                "#{PKG_NAME}"
             ]}
     ]
 }

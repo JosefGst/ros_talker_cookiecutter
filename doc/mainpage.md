@@ -1,13 +1,13 @@
-Template ROS sub pub pkg cpp {#mainpage}
+#{PKG_NAME} {#mainpage}
 ===================
 
 [TOC]
 
 ## Run
 
-    rosrun template_sub_pub template_node
-    rosrun template_sub_pub template_node _pub_string:="hello" _rate:=1
-    roslaunch template_sub_pub template.launch pub_string:="hello" rate:=1
+    rosrun #{PKG_NAME} #{PKG_NAME}_node
+    rosrun #{PKG_NAME} #{PKG_NAME}_node _pub_string:="hello" _rate:=1
+    roslaunch #{PKG_NAME} #{PKG_NAME}.launch pub_string:="hello" rate:=1
 
 ## Published Topics
 - chatter [std_msgs/String](https://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html)
