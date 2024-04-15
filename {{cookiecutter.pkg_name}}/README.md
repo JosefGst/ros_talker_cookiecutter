@@ -3,6 +3,7 @@
 ## Contents
 
 - [Run](#run)
+- [Setup](#setup) 
 - [Published Topics](#published-topics)
 - [Subscribed Topics](#subscribed-topics)
 - [Parameters](#parameters)
@@ -12,7 +13,14 @@
   - [Create Documentation](#create-documentation)
 - [TODO](#todo)
 
-I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this {{cookiecutter.pkg_name}} I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite and c++ debug setup.
+I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this cookiecutter template I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite, linting and c++ debug setup.
+
+## Setup 
+
+    pipx install cookiecutter
+    cookiecutter git@github.com:JosefGst/template_sub_pub.git
+
+Choose name for the package, header and class.
 
 ## Run
 
