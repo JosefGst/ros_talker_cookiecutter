@@ -32,7 +32,7 @@
             "id": "launch",
             "description": "Select launch file",
             "options": [
-                "#{PKG_NAME}"
+                "{{cookiecutter.pkg_name}}"
             ]
         },
         {
@@ -40,7 +40,7 @@
             "id": "pkg",
             "description": "Select package",
             "options": [
-                "#{PKG_NAME}"
+                "{{cookiecutter.pkg_name}}"
             ]}
     ]
 }

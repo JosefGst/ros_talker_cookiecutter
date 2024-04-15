@@ -22,19 +22,23 @@
  * SOFTWARE.
  */
 
-#ifndef #{HEADER_GUARD}_RECONFIGURE_H
-#define #{HEADER_GUARD}_RECONFIGURE_H
 
-#include <dynamic_reconfigure/server.h>
-#include <#{PKG_NAME}/ReconfigureConfig.h>
 
-#{PKG_NAME}::ReconfigureConfig global_config;
+#include "{{cookiecutter.pkg_name}}/{{cookiecutter.pkg_name}}_ros.h"
+#include "{{cookiecutter.pkg_name}}/reconfigure.h"
 
-void reconfigure_cb(#{PKG_NAME}::ReconfigureConfig &config, uint32_t level)
+int main(int argc, char **argv)
 {
-  ROS_INFO("Reconfigure Request: %s",
-           config.pub_string.c_str());
-  global_config = config;
-}
+    ros::init(argc, argv, "{{cookiecutter.pkg_name}}");
 
-#endif  // #{HEADER_GUARD}_RECONFIGURE_H
+    // DYNAMIC RECONFIGURE
+    dynamic_reconfigure::Server<{{cookiecutter.pkg_name}}::ReconfigureConfig> server;
+    dynamic_reconfigure::Server<{{cookiecutter.pkg_name}}::ReconfigureConfig>::CallbackType f;
+    f = boost::bind(&reconfigure_cb, _1, _2);
+    server.setCallback(f);
+
+    ros_{{cookiecutter.pkg_name}}::{{cookiecutter.class_name}} chatter;
+
+    ros::spin();
+    return 0;
+}

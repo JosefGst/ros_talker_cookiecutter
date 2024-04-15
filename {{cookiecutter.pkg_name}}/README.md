@@ -1,4 +1,4 @@
-# #{PKG_NAME}
+# {{cookiecutter.pkg_name}}
 
 ## Contents
 
@@ -12,13 +12,13 @@
   - [Create Documentation](#create-documentation)
 - [TODO](#todo)
 
-I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this #{PKG_NAME} I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite and c++ debug setup.
+I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this {{cookiecutter.pkg_name}} I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite and c++ debug setup.
 
 ## Run
 
-    rosrun #{PKG_NAME} #{PKG_NAME}_node
-    rosrun #{PKG_NAME} #{PKG_NAME}_node _pub_string:="hello" _rate:=1
-    roslaunch #{PKG_NAME} #{PKG_NAME}.launch pub_string:="hello" rate:=1
+    rosrun {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}_node
+    rosrun {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}_node _pub_string:="hello" _rate:=1
+    roslaunch {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}.launch pub_string:="hello" rate:=1
 
 ## Published Topics
 
@@ -61,7 +61,7 @@ In addition to the previous steps
 
 In root of workspace
 
-    catkin_make roslint_#{PKG_NAME}
+    catkin_make roslint_{{cookiecutter.pkg_name}}
 
 ### create documentation
 
@@ -69,7 +69,7 @@ In root of package
 
     rosdoc_lite .
 
-To see the generated [documentation website](https://josefgst.github.io/#{PKG_NAME}/doc/html/index.html).
+To see the generated [documentation website](https://josefgst.github.io/{{cookiecutter.pkg_name}}/doc/html/index.html).
 
 ## TODO
 

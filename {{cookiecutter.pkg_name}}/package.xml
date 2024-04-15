@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>#{PKG_NAME}</name>
+  <name>{{cookiecutter.pkg_name}}</name>
   <version>0.0.0</version>
-  <description>The #{PKG_NAME} package</description>
+  <description>The {{cookiecutter.pkg_name}} package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->

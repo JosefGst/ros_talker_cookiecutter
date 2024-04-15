@@ -7,8 +7,8 @@
       },
       "includePath": [
         "/opt/ros/noetic/include/**",
-        "/home/u/ros/#{PKG_NAME}_ws/devel/include/**",
-        "/home/u/ros/#{PKG_NAME}_ws/src/#{PKG_NAME}/include/**",
+        "${workspaceFolder}/devel/include/**",
+        "${workspaceFolder}/src/{{cookiecutter.pkg_name}}/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",

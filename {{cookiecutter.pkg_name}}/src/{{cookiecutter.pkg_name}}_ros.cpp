@@ -23,31 +23,31 @@
  */
 
 #include "ros/ros.h"
-#include "#{PKG_NAME}/#{PKG_NAME}_ros.h"
-#include "#{PKG_NAME}/reconfigure.h"
+#include "{{cookiecutter.pkg_name}}/{{cookiecutter.pkg_name}}_ros.h"
+#include "{{cookiecutter.pkg_name}}/reconfigure.h"
 #include <string>
 
-namespace ros_#{PKG_NAME}
+namespace ros_{{cookiecutter.pkg_name}}
 {
 
-  #{CLASS_NAME}::#{CLASS_NAME}() : nh_("~")
+  {{cookiecutter.class_name}}::{{cookiecutter.class_name}}() : nh_("~")
   {
     init_params();
     init_chatter();
 
-    timer = nh_.createTimer(ros::Duration(1.0 / rate), &#{CLASS_NAME}::timer_cb, this, false);
+    timer = nh_.createTimer(ros::Duration(1.0 / rate), &{{cookiecutter.class_name}}::timer_cb, this, false);
   }
 
-  void #{CLASS_NAME}::init_chatter()
+  void {{cookiecutter.class_name}}::init_chatter()
   {
     chatter_pub = nh_.advertise<std_msgs::String>("/chatter", 1);
     ROS_INFO_STREAM("advertise to chatter topic on [" << chatter_pub.getTopic() << "]");
 
-    cmd_vel_sub = nh_.subscribe("/cmd_vel", 1, &#{CLASS_NAME}::cmd_vel_cb, this);
+    cmd_vel_sub = nh_.subscribe("/cmd_vel", 1, &{{cookiecutter.class_name}}::cmd_vel_cb, this);
     ROS_INFO_STREAM("subscribe to the cmd topic on [" << cmd_vel_sub.getTopic() << "]");
   }
 
-  void #{CLASS_NAME}::init_params()
+  void {{cookiecutter.class_name}}::init_params()
   {
     if (!nh_.param("rate", rate, 10))
     {
@@ -59,15 +59,15 @@ namespace ros_#{PKG_NAME}
     }
   }
 
-  void #{CLASS_NAME}::timer_cb(const ros::TimerEvent &event)
+  void {{cookiecutter.class_name}}::timer_cb(const ros::TimerEvent &event)
   {
     string_msg.data = global_config.pub_string;
     chatter_pub.publish(string_msg);
   }
 
-  void #{CLASS_NAME}::cmd_vel_cb(const geometry_msgs::Twist &msg)
+  void {{cookiecutter.class_name}}::cmd_vel_cb(const geometry_msgs::Twist &msg)
   {
     ROS_INFO_STREAM("cmd_vel: [" << msg << "]");
   }
 
-}  // namespace ros_#{PKG_NAME}
+}  // namespace ros_{{cookiecutter.pkg_name}}
