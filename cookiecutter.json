@@ -1,0 +1,5 @@
+{
+        "pkg_name": "example",
+        "header_guard": "EXAMPLE",
+        "class_name": "Example"
+}

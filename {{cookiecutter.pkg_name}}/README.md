@@ -1,8 +1,9 @@
-# Template ROS sub pub pkg cpp
+# {{cookiecutter.pkg_name}}
 
 ## Contents
 
 - [Run](#run)
+- [Setup](#setup) 
 - [Published Topics](#published-topics)
 - [Subscribed Topics](#subscribed-topics)
 - [Parameters](#parameters)
@@ -12,13 +13,20 @@
   - [Create Documentation](#create-documentation)
 - [TODO](#todo)
 
-I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this template I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite and c++ debug setup.
+I kept copying code from the official documentation or from my previous works every time I created a new ROS package. With this cookiecutter template I hope the repetitive setup task can be reduced and I can jump directly into the development. For now it includes a simple publisher and subscriber, dynamic reconfigurable parameters, documentation generation with rosdoc_lite, linting and c++ debug setup.
+
+## Setup 
+
+    pipx install cookiecutter
+    cookiecutter git@github.com:JosefGst/template_sub_pub.git
+
+Choose name for the package, header and class.
 
 ## Run
 
-    rosrun template_sub_pub template_node
-    rosrun template_sub_pub template_node _pub_string:="hello" _rate:=1
-    roslaunch template_sub_pub template.launch pub_string:="hello" rate:=1
+    rosrun {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}_node
+    rosrun {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}_node _pub_string:="hello" _rate:=1
+    roslaunch {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}.launch pub_string:="hello" rate:=1
 
 ## Published Topics
 
@@ -61,7 +69,7 @@ In addition to the previous steps
 
 In root of workspace
 
-    catkin_make roslint_template_sub_pub
+    catkin_make roslint_{{cookiecutter.pkg_name}}
 
 ### create documentation
 
@@ -69,7 +77,7 @@ In root of package
 
     rosdoc_lite .
 
-To see the generated [documentation website](https://josefgst.github.io/template_sub_pub/doc/html/index.html).
+To see the generated [documentation website](https://josefgst.github.io/{{cookiecutter.pkg_name}}/doc/html/index.html).
 
 ## TODO
 

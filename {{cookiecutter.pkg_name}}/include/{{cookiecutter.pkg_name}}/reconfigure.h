@@ -22,19 +22,19 @@
  * SOFTWARE.
  */
 
-#ifndef TEMPLATE_SUB_PUB_RECONFIGURE_H
-#define TEMPLATE_SUB_PUB_RECONFIGURE_H
+#ifndef {{cookiecutter.header_guard}}_RECONFIGURE_H
+#define {{cookiecutter.header_guard}}_RECONFIGURE_H
 
 #include <dynamic_reconfigure/server.h>
-#include <template_sub_pub/ReconfigureConfig.h>
+#include <{{cookiecutter.pkg_name}}/ReconfigureConfig.h>
 
-template_sub_pub::ReconfigureConfig global_config;
+{{cookiecutter.pkg_name}}::ReconfigureConfig global_config;
 
-void reconfigure_cb(template_sub_pub::ReconfigureConfig &config, uint32_t level)
+void reconfigure_cb({{cookiecutter.pkg_name}}::ReconfigureConfig &config, uint32_t level)
 {
   ROS_INFO("Reconfigure Request: %s",
            config.pub_string.c_str());
   global_config = config;
 }
 
-#endif  // TEMPLATE_SUB_PUB_RECONFIGURE_H
+#endif  // {{cookiecutter.header_guard}}_RECONFIGURE_H

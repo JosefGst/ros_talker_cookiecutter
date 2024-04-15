@@ -1,13 +1,13 @@
-Template ROS sub pub pkg cpp {#mainpage}
+{{cookiecutter.pkg_name}}
 ===================
 
 [TOC]
 
 ## Run
 
-    rosrun template_sub_pub template_node
-    rosrun template_sub_pub template_node _pub_string:="hello" _rate:=1
-    roslaunch template_sub_pub template.launch pub_string:="hello" rate:=1
+    rosrun {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}_node
+    rosrun {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}_node _pub_string:="hello" _rate:=1
+    roslaunch {{cookiecutter.pkg_name}} {{cookiecutter.pkg_name}}.launch pub_string:="hello" rate:=1
 
 ## Published Topics
 - chatter [std_msgs/String](https://docs.ros.org/en/melodic/api/std_msgs/html/msg/String.html)

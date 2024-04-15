@@ -1,3 +1,0 @@
-- builder: doxygen
-  file_patterns: '*.cpp *.h *.dox *.md'
-  homepage: https://josefgst.github.io/template_sub_pub/doc/html/index.html
