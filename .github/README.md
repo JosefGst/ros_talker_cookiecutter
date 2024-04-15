@@ -1,1 +1,1 @@
-../{{cookiecutter.pkg_name}}/doc/mainpage.md
+../{{cookiecutter.pkg_name}}/README.md
