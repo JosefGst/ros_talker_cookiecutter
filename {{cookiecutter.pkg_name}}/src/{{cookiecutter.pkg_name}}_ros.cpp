@@ -44,7 +44,7 @@ namespace ros_{{cookiecutter.pkg_name}}
     ROS_INFO_STREAM("advertise to chatter topic on [" << chatter_pub.getTopic() << "]");
 
     cmd_vel_sub = nh_.subscribe("/cmd_vel", 1, &{{cookiecutter.class_name}}::cmd_vel_cb, this);
-    ROS_INFO_STREAM("subscribe to the cmd topic on [" << cmd_vel_sub.getTopic() << "]");
+    ROS_INFO_STREAM("subscribe to topic on [" << cmd_vel_sub.getTopic() << "]");
   }
 
   void {{cookiecutter.class_name}}::init_params()
