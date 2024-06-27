@@ -50,13 +50,7 @@ namespace ros_{{cookiecutter.pkg_name}}
   void {{cookiecutter.class_name}}::init_params()
   {
     if (!nh_.param("rate", rate, 10))
-    {
-      ROS_WARN("No rate set. Default is 10");
-    }
     if (!nh_.param("pub_string", global_config.pub_string, std::string("Hello World!")))
-    {
-      ROS_WARN("No pub_string set. Default is 'Hello World!'");
-    }
   }
 
   void {{cookiecutter.class_name}}::timer_cb(const ros::TimerEvent &event)
