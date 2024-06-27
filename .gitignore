@@ -1,0 +1,2 @@
+{{cookiecutter.pkg_name}}/doc/html
+{{cookiecutter.pkg_name}}/doc/manifest.yaml
