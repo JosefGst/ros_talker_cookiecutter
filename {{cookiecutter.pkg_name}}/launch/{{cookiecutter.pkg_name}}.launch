@@ -3,12 +3,15 @@
     <!-- args-->
     <arg name="rate" default="10"/>
     <arg name="pub_string" default="Hello World" />
+    <arg name="chatter_topic" default="/chatter"/>
+
 
     <!-- lingao base_driver -->
-    <node pkg="{{cookiecutter.pkg_name}}" name="{{cookiecutter.pkg_name}}_node" type="{{cookiecutter.pkg_name}}_node" output="screen">
+    <node pkg="{{cookiecutter.pkg_name}}" name="{{cookiecutter.pkg_name}}_node" type="{{cookiecutter.pkg_name}}_node" output="screen" respawn="true" respawn_delay="30" clear_params="true">
         <param name="rate" value="$(arg rate)"/>
         <param name="pub_string" value="$(arg pub_string)"/>
-
+        
+        <remap from="/chatter" to="$(arg chatter_topic)"/>
     </node>
 
     <node pkg="rqt_reconfigure" type="rqt_reconfigure" name="rqt_reconfigure" output="screen"/>
