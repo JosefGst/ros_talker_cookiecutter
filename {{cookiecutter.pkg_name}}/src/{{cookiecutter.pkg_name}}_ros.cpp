@@ -49,8 +49,8 @@ namespace ros_{{cookiecutter.pkg_name}}
 
   void {{cookiecutter.class_name}}::init_params()
   {
-    if (!nh_.param("rate", rate, 10))
-    if (!nh_.param("pub_string", global_config.pub_string, std::string("Hello World!")))
+    nh_.param("rate", rate, 10);
+    nh_.param("pub_string", global_config.pub_string, std::string("Hello World!"));
   }
 
   void {{cookiecutter.class_name}}::timer_cb(const ros::TimerEvent &event)
